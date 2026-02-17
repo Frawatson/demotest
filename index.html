@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo test website with improved image handling and responsive design">
+    <title>Demo Test - Enhanced</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="images/logo.svg" alt="Demo Test Logo" class="logo" width="120" height="40">
+                </div>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                    <span class="nav-toggle-icon"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#about" role="menuitem">About</a></li>
+                    <li role="none"><a href="#gallery" role="menuitem">Gallery</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero" role="banner">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Demo Test</h1>
+                <p class="hero-description">Experience enhanced image loading and responsive design</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+            <div class="hero-image">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/hero-desktop.webp, images/hero-desktop@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="images/hero-mobile.webp, images/hero-mobile@2x.webp 2x">
+                    <img src="images/hero-fallback.jpg" alt="Hero image showcasing our demo" class="responsive-image" loading="eager">
+                </picture>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Our Demo</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>This enhanced demo showcases proper image handling, responsive design, and modern web development practices.</p>
+                        <ul class="feature-list">
+                            <li>Responsive image loading with WebP support</li>
+                            <li>Fallback images for compatibility</li>
+                            <li>Lazy loading for performance</li>
+                            <li>Accessible design patterns</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <picture>
+                            <source srcset="images/about.webp" type="image/webp">
+                            <img src="images/about.jpg" alt="About us illustration" class="responsive-image" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Image Gallery</h2>
+                <div class="gallery-grid" role="group" aria-label="Image gallery">
+                    <div class="gallery-item">
+                        <picture>
+                            <source srcset="images/gallery-1.webp" type="image/webp">
+                            <img src="images/gallery-1.jpg" alt="Gallery image 1" class="gallery-image" loading="lazy">
+                        </picture>
+                        <div class="image-overlay">
+                            <span class="image-title">Demo Image 1</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <picture>
+                            <source srcset="images/gallery-2.webp" type="image/webp">
+                            <img src="images/gallery-2.jpg" alt="Gallery image 2" class="gallery-image" loading="lazy">
+                        </picture>
+                        <div class="image-overlay">
+                            <span class="image-title">Demo Image 2</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <picture>
+                            <source srcset="images/gallery-3.webp" type="image/webp">
+                            <img src="images/gallery-3.jpg" alt="Gallery image 3" class="gallery-image" loading="lazy">
+                        </picture>
+                        <div class="image-overlay">
+                            <span class="image-title">Demo Image 3</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <picture>
+                            <source srcset="images/gallery-4.webp" type="image/webp">
+                            <img src="images/gallery-4.jpg" alt="Gallery image 4" class="gallery-image" loading="lazy">
+                        </picture>
+                        <div class="image-overlay">
+                            <span class="image-title">Demo Image 4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required aria-describedby="name-error">
+                        <span class="error-message" id="name-error" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <span class="error-message" id="email-error" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                        <span class="error-message" id="message-error" role="alert"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Demo Test. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="loading-overlay" id="loading-overlay" aria-hidden="true">
+        <div class="loading-spinner" role="status" aria-label="Loading content">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
