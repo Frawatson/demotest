@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the latest iPhone release. Premium quality, cutting-edge technology, available now from your trusted distributor.">
+    <meta name="keywords" content="iPhone, new release, mobile phone, smartphone, Apple">
+    <meta name="author" content="iPhone Premium Distributor">
+    
+    <!-- SECURITY FIX: Added CSP header to prevent XSS attacks -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
+    
+    <!-- SECURITY FIX: Added X-Frame-Options to prevent clickjacking -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <!-- SECURITY FIX: Added X-Content-Type-Options to prevent MIME sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <title>New iPhone Release - Premium Quality Smartphones</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- SECURITY FIX: Added integrity hash for external CDN resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>iPhone Premium</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#specs" class="nav-link">Specs</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">The Future is Here</h1>
+                    <p class="hero-subtitle">Experience the revolutionary new iPhone with cutting-edge technology and stunning design</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">Pre-Order Now</button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('features')">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/iphone-hero.jpg" alt="New iPhone" class="hero-img" loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">Revolutionary Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Lightning Fast Performance</h3>
+                        <p>Next-generation processor delivers unprecedented speed and efficiency for all your tasks.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Pro Camera System</h3>
+                        <p>Advanced camera technology captures stunning photos and videos in any lighting condition.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-battery-full"></i>
+                        </div>
+                        <h3>All-Day Battery</h3>
+                        <p>Extended battery life keeps you connected throughout your busiest days.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Enhanced Security</h3>
+                        <p>Advanced biometric authentication and encryption protect your personal data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openModal('gallery1')">
+                        <img src="assets/images/product-gallery/iphone-1.jpg" alt="iPhone front view" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('gallery2')">
+                        <img src="assets/images/product-gallery/iphone-2.jpg" alt="iPhone back view" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('gallery3')">
+                        <img src="assets/images/product-gallery/iphone-3.jpg" alt="iPhone side view" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('gallery4')">
+                        <img src="assets/images/product-gallery/iphone-4.jpg" alt="iPhone accessories" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="specs" class="specs">
+            <div class="container">
+                <h2 class="section-title">Technical Specifications</h2>
+                <div class="specs-container">
+                    <div class="specs-image">
+                        <img src="assets/images/iphone-specs.jpg" alt="iPhone specifications" loading="lazy">
+                    </div>
+                    <div class="specs-content">
+                        <div class="spec-item">
+                            <h4>Display</h4>
+                            <p>6.7-inch Super Retina XDR display with ProMotion technology</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Processor</h4>
+                            <p>A17 Pro chip with 6-core CPU and 6-core GPU</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Storage</h4>
+                            <p>Available in 128GB, 256GB, 512GB, and 1TB</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Camera</h4>
+                            <p>Triple-camera system with 48MP main camera</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Battery</h4>
+                            <p>Up to 29 hours video playback</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Connectivity</h4>
+                            <p>5G capable with Wi-Fi 6E and Bluetooth 5.3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@iphonepremium.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Tech Street, Silicon Valley, CA 94000</span>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <!-- SECURITY FIX: Added CSRF token -->
+                        <input type="hidden" id="csrfToken" name="csrf_token" value="">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required maxlength="100" 
+                                   pattern="[A-Za-z\s]{2,100}" title="Name should contain only letters and spaces, 2-100 characters">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required maxlength="254">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" maxlength="20" 
+                                   pattern="[+]?[\d\s\-\(\)]{10,20}" title="Please enter a valid phone number">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required maxlength="1000" 
+                                     placeholder="Tell us about your interest in the new iPhone..."></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        <div class="form-group">
+                            <!-- SECURITY FIX: Added CAPTCHA for bot protection -->
+                            <div class="captcha-container">
+                                <label for="captcha">Security Check: What is 3 + 7? *</label>
+                                <input type="number" id="captcha" name="captcha" required min="0" max="100">
+                                <span class="error-message" id="captchaError"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>iPhone Premium</h4>
+                    <p>Your trusted distributor for the latest iPhone releases and premium mobile technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#specs">Specifications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 iPhone Premium Distributor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for gallery -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Gallery image">
+        </div>
+    </div>
+
+    <!-- Loading spinner -->
+    <div id="loadingSpinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="assets/js/security.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
